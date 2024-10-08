@@ -2,11 +2,14 @@ html, body {
     margin: 0;
     padding: 0;
 }
+body{
+  background-color: rgb(188, 188, 188);
+}
 #topBar{
   height: 10vh;
   display: flex;
   justify-content: space-around;
-  background-color: blue;
+  background-color: rgb(167, 167, 255);
 
   button{
     margin:2vh;
@@ -16,7 +19,7 @@ html, body {
 }
 
 .image{
-  height: 30vh;
+  height: 50vh;
   width:25vw;
   background-color:rgb(105, 105, 105)
 }

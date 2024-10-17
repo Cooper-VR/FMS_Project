@@ -56,7 +56,7 @@ function button2(){
     }
 
     info.innerHTML = 'Button 2 was clicked';
-    info.style.left = '25vw';
+    info.style.left = '21vw';
     console.log('button2');
 }
 
@@ -75,7 +75,7 @@ function button3(){
     }
 
     info.innerHTML = 'Button 3 was clicked';
-    info.style.left = '45vw';
+    info.style.left = '37vw';
     console.log('button3');
 }
 
@@ -94,7 +94,7 @@ function button4(){
     }
 
     info.innerHTML = 'Button 4 was clicked';
-    info.style.left = '65vw';
+    info.style.left = '53vw';
     console.log('button4');
 }
 
@@ -113,7 +113,7 @@ function button5(){
     }
 
     info.innerHTML = 'Button 5 was clicked';
-    info.style.left = '85vw';
+    info.style.left = '69vw';
     console.log('button5');
 }
 
@@ -125,7 +125,7 @@ function button6(){
     button5visible = false;
 
     button6visible = !button6visible;
-    if (button5visible){
+    if (button6visible){
         info.style.visibility = 'visible';
     } else {
         info.style.visibility = 'hidden';

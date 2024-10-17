@@ -7,6 +7,7 @@ let button2visible = false;
 let button3visible = false;
 let button4visible = false;
 let button5visible = false;
+let button6visible = false;
 
 function setBools(){
     button1visible = false;
@@ -14,6 +15,7 @@ function setBools(){
     button3visible = false;
     button4visible = false;
     button5visible = false;
+    button6visible = false;
 }
 
 function button1(){
@@ -24,6 +26,7 @@ function button1(){
     button3visible = false;
     button4visible = false;
     button5visible = false;
+    button6visible = false;
 
     info.style.left = '5vw';
 
@@ -43,6 +46,7 @@ function button2(){
     button3visible = false;
     button4visible = false;
     button5visible = false;
+    button6visible = false;
 
     button2visible = !button2visible;
     if (button2visible){
@@ -61,6 +65,7 @@ function button3(){
     button2visible = false;
     button4visible = false;
     button5visible = false;
+    button6visible = false;
 
     button3visible = !button3visible;
     if (button3visible){
@@ -79,6 +84,7 @@ function button4(){
     button2visible = false;
     button3visible = false;
     button5visible = false;
+    button6visible = false;
 
     button4visible = !button4visible;
     if (button4visible){
@@ -97,6 +103,7 @@ function button5(){
     button2visible = false;
     button3visible = false;
     button4visible = false;
+    button6visible = false;
 
     button5visible = !button5visible;
     if (button5visible){
@@ -108,4 +115,23 @@ function button5(){
     info.innerHTML = 'Button 5 was clicked';
     info.style.left = '85vw';
     console.log('button5');
+}
+
+function button6(){
+    button1visible = false;
+    button2visible = false;
+    button3visible = false;
+    button4visible = false;
+    button5visible = false;
+
+    button6visible = !button6visible;
+    if (button5visible){
+        info.style.visibility = 'visible';
+    } else {
+        info.style.visibility = 'hidden';
+    }
+
+    info.innerHTML = 'Button 6 was clicked';
+    info.style.left = '85vw';
+    console.log('button6');
 }

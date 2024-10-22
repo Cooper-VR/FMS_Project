@@ -33,10 +33,11 @@ function resetGame() {
   time = 0;
   gameStarted = true;
   GameOver = false;
+  speed = 1;
 }
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight * 0.85);
+  createCanvas(window.innerWidth, window.innerHeight*0.95);
 }
 
 function draw() {
@@ -63,6 +64,7 @@ function draw() {
     }
 
     for (let i = 0; i < positionsArray.length; i++) {
+      fill(0, 0, 0);
       circle(positionsArray[i], positionsArray2[i], frutSize);
       positionsArray2[i] += speed + deltaTime / 1000;
 
@@ -91,6 +93,7 @@ function draw() {
     }
 
     // Player basket (mouse controlled)
+    fill(50, 50, 50);
     circle(mouseX, (window.innerHeight * 0.9) - 20, playerSize);
     
     scoreString = "Score: " + score;

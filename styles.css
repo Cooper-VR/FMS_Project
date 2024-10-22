@@ -1,15 +1,25 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(216, 216, 216, 0.5)), url('https://images.unsplash.com/photo-1557683316-973673baf926');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
 }
 body{
-  background-color: rgb(188, 188, 188);
+  background-color: rgba(255, 255, 255, 0);
 }
+a{
+  text-decoration: none;
+  color: black;
+}
+
 #topBar{
   height: 10vh;
   display: flex;
   justify-content: space-around;
   background-color: rgb(167, 167, 255);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 
   button{
     margin:2vh;
@@ -20,7 +30,7 @@ body{
 
 .image{
   height: 50vh;
-  width:25vw;
+  width:20vw;
   background-color:rgb(105, 105, 105)
 }
 #outer{
@@ -32,5 +42,17 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  p{
+    font-size: 3vh;
+  }
+}
+#info{
+  position: absolute;
+  top: 15vh;
+  visibility: hidden;
+  left: 10vw;
+  width: 10vw;
+  height: 10vh;
+  background-color: rgb(255, 255, 255);
 }
   

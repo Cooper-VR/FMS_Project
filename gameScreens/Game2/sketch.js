@@ -41,7 +41,7 @@ function setup() {
 }
 
 function draw() {
-  speed += (deltaTime / 4000);
+  speed += (deltaTime / 5000);
 
   if (!gameStarted) {
     // Display a start screen if the game hasn't started yet

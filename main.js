@@ -37,8 +37,6 @@ function button1(){
     }
 
     info.innerHTML = "This is a set a games that are used to test and imporive fine motor skills";
-    //info.setAttribute('style', 'left: 5vw;');
-    console.log('button1');
 }
 
 function button2(){
@@ -57,7 +55,6 @@ function button2(){
 
     info.innerHTML = 'game 1';
     info.style.left = '21vw';
-    console.log('button2');
 }
 
 function button3(){
@@ -74,9 +71,8 @@ function button3(){
         info.style.visibility = 'hidden';
     }
 
-    info.innerHTML = 'Button 3 was clicked';
+    info.innerHTML = 'This Game is a fruit catching game where you move the mouse to in order to move the basket to catch the falling fruit.';
     info.style.left = '37vw';
-    console.log('button3');
 }
 
 function button4(){
@@ -95,7 +91,6 @@ function button4(){
 
     info.innerHTML = 'Button 4 was clicked';
     info.style.left = '53vw';
-    console.log('button4');
 }
 
 function button5(){
@@ -114,7 +109,6 @@ function button5(){
 
     info.innerHTML = 'Button 5 was clicked';
     info.style.left = '69vw';
-    console.log('button5');
 }
 
 function button6(){
@@ -133,5 +127,4 @@ function button6(){
 
     info.innerHTML = 'Click one of the games below and play. To return to this screen click the back button in the top right corner';
     info.style.left = '85vw';
-    console.log('button6');
 }

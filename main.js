@@ -56,7 +56,7 @@ function button2(){
     }
 
     info.innerHTML = 'Button 2 was clicked';
-    info.style.left = '25vw';
+    info.style.left = '20vw';
     console.log('button2');
 }
 
@@ -75,7 +75,7 @@ function button3(){
     }
 
     info.innerHTML = 'Button 3 was clicked';
-    info.style.left = '45vw';
+    info.style.left = '40vw';
     console.log('button3');
 }
 
@@ -94,7 +94,7 @@ function button4(){
     }
 
     info.innerHTML = 'Button 4 was clicked';
-    info.style.left = '65vw';
+    info.style.left = '60vw';
     console.log('button4');
 }
 
@@ -113,7 +113,7 @@ function button5(){
     }
 
     info.innerHTML = 'Button 5 was clicked';
-    info.style.left = '85vw';
+    info.style.left = '80vw';
     console.log('button5');
 }
 
@@ -132,6 +132,6 @@ function button6(){
     }
 
     info.innerHTML = 'Button 6 was clicked';
-    info.style.left = '85vw';
+    info.style.left = '100vw';
     console.log('button6');
 }

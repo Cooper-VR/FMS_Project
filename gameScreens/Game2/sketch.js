@@ -1,7 +1,7 @@
 let time = 0;
 let score = 0;
 let misses = 3;
-let speed = 8;
+let speed = 1;
 let playerSize = 20;
 let frutSize = 15;
 let missesString = "";
@@ -40,6 +40,8 @@ function setup() {
 }
 
 function draw() {
+  speed += (deltaTime / 4000);
+
   if (!gameStarted) {
     // Display a start screen if the game hasn't started yet
     background(220);
@@ -54,7 +56,7 @@ function draw() {
 
     time += deltaTime / 1000;
 
-    if (time > 3) {
+    if (time > 1.5) {
       positionsArray.push(random(0, window.innerWidth));
       positionsArray2.push(50);
       time = 0;

@@ -31,7 +31,7 @@ a{
 .image{
   height: 50vh;
   width:20vw;
-  background-color:rgb(117, 117, 117)
+  background-color:rgb(105, 105, 105)
 }
 #outer{
   display: flex;

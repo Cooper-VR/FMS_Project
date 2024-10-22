@@ -132,6 +132,6 @@ function button6(){
     }
 
     info.innerHTML = 'Button 6 was clicked';
-    info.style.left = '100vw';
+    info.style.left = '85vw';
     console.log('button6');
 }

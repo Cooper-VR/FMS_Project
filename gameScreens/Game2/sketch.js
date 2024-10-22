@@ -36,7 +36,7 @@ function resetGame() {
 }
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight * 0.9);
+  createCanvas(window.innerWidth, window.innerHeight * 0.85);
 }
 
 function draw() {

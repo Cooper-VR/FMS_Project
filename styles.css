@@ -1,10 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(216, 216, 216, 0.5)), url('https://images.unsplash.com/photo-1557683316-973673baf926');
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: 100% 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(-90deg,rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
 }
 body{
   background-color: rgba(255, 255, 255, 0);

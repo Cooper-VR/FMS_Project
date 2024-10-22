@@ -5,10 +5,15 @@
     flex-direction: row;
 }
 #backButton{
+    a{
+        text-decoration: none;
+        color: white;
+    }
     display: flex;
-    background-color: red;
+    background-color: rgb(89, 89, 255);
     border-radius: 1vh;
     margin-bottom: 1vh;
+    border: 1px solid black; /* Added black border */
 }
 #link{
     padding-left:2vw;

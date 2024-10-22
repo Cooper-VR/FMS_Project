@@ -36,7 +36,7 @@ function button1(){
         info.style.visibility = 'hidden';
     }
 
-    info.innerHTML = button1visible;
+    info.innerHTML = "This is a set a games that are used to test and imporive fine motor skills";
     //info.setAttribute('style', 'left: 5vw;');
     console.log('button1');
 }
@@ -55,7 +55,7 @@ function button2(){
         info.style.visibility = 'hidden';
     }
 
-    info.innerHTML = 'Button 2 was clicked';
+    info.innerHTML = 'game 1';
     info.style.left = '21vw';
     console.log('button2');
 }
@@ -131,7 +131,7 @@ function button6(){
         info.style.visibility = 'hidden';
     }
 
-    info.innerHTML = 'Button 6 was clicked';
+    info.innerHTML = 'Click one of the games below and play. To return to this screen click the back button in the top right corner';
     info.style.left = '85vw';
     console.log('button6');
 }

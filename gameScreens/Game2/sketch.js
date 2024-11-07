@@ -2,16 +2,19 @@ let time = 0;
 let score = 0;
 let misses = 3;
 let speed = 1;
-let playerSize = 20;
-let frutSize = 15;
+let playerSize = 60;
+let frutSize = 30;
 let missesString = "";
 let scoreString = "";
 let positionThreshold = (window.innerHeight * 0.9);
 let removeIndexes = -1;
 let positionsArray = [];
 let positionsArray2 = [];
+let fruitArray = [];
+let fruitArrayImg = [];
 let gameStarted = false;
 let GameOver = false;
+let basket;
 
 document.addEventListener('keydown', function(event) {
   if (event.code === 'Space') {
@@ -23,6 +26,11 @@ document.addEventListener('keydown', function(event) {
     }
   }
 });
+
+function preload() {
+  basket = loadImage('./assets/basket.png');
+  fruitArrayImg.push(loadImage('./assets/cherry.png'));
+}
 
 function resetGame() {
   // Reset all game variables
@@ -60,17 +68,22 @@ function draw() {
     if (time > 1.5) {
       positionsArray.push(random(0, window.innerWidth));
       positionsArray2.push(50);
+      fruitArray.push(random(fruitArrayImg));
       time = 0;
     }
 
     for (let i = 0; i < positionsArray.length; i++) {
-      fill(0, 0, 0);
+      fill(0, 0, 0, 0);
+      stroke(0, 0, 0, 0);
       circle(positionsArray[i], positionsArray2[i], frutSize);
+
+      image(fruitArray[i], positionsArray[i] - frutSize / 2, positionsArray2[i] - frutSize / 2, frutSize, frutSize);
+
       positionsArray2[i] += speed + deltaTime / 1000;
 
-      let dist = Math.sqrt(Math.pow(positionsArray[i] - mouseX, 2) + Math.pow(positionsArray2[i] - ((window.innerHeight * 0.9) - 20), 2));
+      let dista = Math.sqrt(Math.pow(positionsArray[i] - mouseX, 2) + Math.pow(positionsArray2[i] - ((window.innerHeight * 0.9) - 20), 2));
 
-      if (dist < (playerSize + frutSize) / 2) {
+      if (dista < (playerSize + frutSize) / 2) {
         score++;
         removeIndexes = i;
       }
@@ -93,8 +106,10 @@ function draw() {
     }
 
     // Player basket (mouse controlled)
-    fill(50, 50, 50);
+    fill(0, 0, 0, 0);
+    stroke(0, 0, 0, 0);
     circle(mouseX, (window.innerHeight * 0.9) - 20, playerSize);
+    image(basket, mouseX-(playerSize/2), (window.innerHeight * 0.9)-playerSize, playerSize, playerSize);
     
     scoreString = "Score: " + score;
     missesString = "Misses left: " + misses;
@@ -111,7 +126,4 @@ function draw() {
     textSize(30);
     text("Press Space to Restart", window.innerWidth / 2, window.innerHeight / 2 + 50);
   }
-
-  console.log('game started: ' + gameStarted);
-  console.log('game over: ' + GameOver);
 }

@@ -30,6 +30,12 @@ document.addEventListener('keydown', function(event) {
 function preload() {
   basket = loadImage('./assets/basket.png');
   fruitArrayImg.push(loadImage('./assets/cherry.png'));
+  fruitArrayImg.push(loadImage('./assets/grapes.png'));
+  fruitArrayImg.push(loadImage('./assets/bannana.png'));
+  fruitArrayImg.push(loadImage('./assets/cherry.png'));
+  fruitArrayImg.push(loadImage('./assets/grapes.png'));
+  fruitArrayImg.push(loadImage('./assets/bannana.png'));
+  fruitArrayImg.push(loadImage('./assets/fly.png'));
 }
 
 function resetGame() {
@@ -84,12 +90,17 @@ function draw() {
       let dista = Math.sqrt(Math.pow(positionsArray[i] - mouseX, 2) + Math.pow(positionsArray2[i] - ((window.innerHeight * 0.9) - 20), 2));
 
       if (dista < (playerSize + frutSize) / 2) {
+        if (fruitArray[i] == fruitArrayImg[6]){
+          misses--;
+        }
         score++;
         removeIndexes = i;
       }
 
       if (positionsArray2[i] > positionThreshold) {
-        misses--;
+        if (fruitArray[i] != fruitArrayImg[6]){
+          misses--;
+        }
         removeIndexes = i;
       }
     }
@@ -97,6 +108,7 @@ function draw() {
     if (removeIndexes > -1) {
       positionsArray.splice(removeIndexes, 1); // Fix: correctly remove the element
       positionsArray2.splice(removeIndexes, 1); // Fix: correctly remove the element
+      fruitArray.splice(removeIndexes, 1); // Fix: correctly remove the element
       removeIndexes = -1;
     }
 
@@ -116,6 +128,7 @@ function draw() {
 
     textSize(20);
     textAlign(LEFT);
+    fill(0, 0, 0);
     text(scoreString, 50, 50);
     text(missesString, 50, 70);
   } else {

@@ -20,3 +20,8 @@
     margin-bottom: 1vh;
     border: 1px solid black; /* Added black border */
 }
+*{
+    /*remove horizontal scroll bar*/
+    overflow-x: hidden;
+    
+}

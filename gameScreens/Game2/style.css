@@ -21,7 +21,7 @@
     border: 1px solid black; /* Added black border */
 }
 *{
-    /*remove horizontal scroll bar*/
     overflow-x: hidden;
-    
+    overflow-y: hidden;
+
 }

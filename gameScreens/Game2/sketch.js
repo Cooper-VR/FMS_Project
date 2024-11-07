@@ -15,6 +15,7 @@ let fruitArrayImg = [];
 let gameStarted = false;
 let GameOver = false;
 let basket;
+let backgroundImg;
 
 document.addEventListener('keydown', function(event) {
   if (event.code === 'Space') {
@@ -29,6 +30,7 @@ document.addEventListener('keydown', function(event) {
 
 function preload() {
   basket = loadImage('./assets/basket.png');
+  backgroundImg = loadImage('./assets/background.jpg');
   fruitArrayImg.push(loadImage('./assets/cherry.png'));
   fruitArrayImg.push(loadImage('./assets/grapes.png'));
   fruitArrayImg.push(loadImage('./assets/bannana.png'));
@@ -51,16 +53,21 @@ function resetGame() {
 }
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight*0.95);
+  createCanvas(window.innerWidth, window.innerHeight);
+  image(backgroundImg, 0, 0, window.innerWidth, window.innerHeight);
 }
 
 function draw() {
   speed += (deltaTime / 5000);
+  image(backgroundImg, 0, 0, window.innerWidth, window.innerHeight);
+  
 
   if (!gameStarted) {
     // Display a start screen if the game hasn't started yet
     background(220);
+    image(backgroundImg, 0, 0, window.innerWidth, window.innerHeight);
     textSize(30);
+    fill(255, 255, 255)
     textAlign(CENTER);
     text("Press Space to Start", window.innerWidth / 2, window.innerHeight / 2);
     return;
@@ -68,7 +75,7 @@ function draw() {
 
   if (!GameOver) {
     background(220);
-
+    image(backgroundImg, 0, 0, window.innerWidth, window.innerHeight);
     time += deltaTime / 1000;
 
     if (time > 1.5) {
@@ -128,13 +135,14 @@ function draw() {
 
     textSize(20);
     textAlign(LEFT);
-    fill(0, 0, 0);
+    fill(255, 255, 255)
     text(scoreString, 50, 50);
     text(missesString, 50, 70);
   } else {
     // Display Game Over screen
     textSize(50);
     textAlign(CENTER);
+    fill(255, 255, 255)
     text("Game Over", window.innerWidth / 2, window.innerHeight / 2);
     textSize(30);
     text("Press Space to Restart", window.innerWidth / 2, window.innerHeight / 2 + 50);

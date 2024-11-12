@@ -55,4 +55,10 @@ a{
   background-color: rgb(255, 255, 255);
   border-radius: 3%;
 }
+#game2Screen{
+  background-image: url('homeAssets/fruitBackground.PNG'); /* Replace with your image URL */
+background-size: cover; /* or cover, stretch, or a specific size */
+background-repeat: no-repeat; /* or repeat-x, repeat-y, or repeat */
+background-position: center; /* or top, bottom, left, right, or a specific position */
+}
   

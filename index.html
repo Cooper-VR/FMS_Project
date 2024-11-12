@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script async src="https://rum.cronitor.io/script.js"></script>
+<script>
+    window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+    cronitor('config', { clientKey: '260654ab3fb5ca59773320bff17c1ed5' });
+</script>
+
     <meta charset="utf-8"/>
     <script scr="./main.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -11,7 +17,7 @@
     <div id="topBar">
       <button onclick="button1()">about</button>
       <button onclick="button2()">Game 1</button>
-      <button onclick="button3()">Game 2</button>
+      <button onclick="button3()">Fruit Game</button>
       <button onclick="button4()">Game 3</button>
       <button onclick="button5()">Game 4</button>
       <button onclick="button6()">How to</button>
@@ -27,7 +33,7 @@
       <a href="./gameScreens/Game2/game2.html">
         <div class="inner">
           <p>Fruit Catching Game</p>
-          <div class="image"></div>
+          <div id="game2Screen" class="image"></div>
         </div>
       </a>
       <a href="./gameScreens/Game3/game3.html">

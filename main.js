@@ -107,7 +107,7 @@ function button5(){
         info.style.visibility = 'hidden';
     }
 
-    info.innerHTML = 'Button 5 was clicked';
+    info.innerHTML = 'This game is a typing game where you have to type out a given word. For every letter wrong you lose a life so be careful!';
     info.style.left = '69vw';
 }
 

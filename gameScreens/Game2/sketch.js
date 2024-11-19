@@ -99,8 +99,9 @@ function draw() {
       if (dista < (playerSize + frutSize) / 2) {
         if (fruitArray[i] == fruitArrayImg[6]){
           misses--;
-        }
+        }else{
         score++;
+      }
         removeIndexes = i;
       }
 

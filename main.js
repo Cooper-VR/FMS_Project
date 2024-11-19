@@ -53,7 +53,7 @@ function button2(){
         info.style.visibility = 'hidden';
     }
 
-    info.innerHTML = 'game 1';
+    info.innerHTML = 'This game is a Matching game where you are supposed to match the given figures';
     info.style.left = '21vw';
 }
 
@@ -89,7 +89,7 @@ function button4(){
         info.style.visibility = 'hidden';
     }
 
-    info.innerHTML = 'Button 4 was clicked';
+    info.innerHTML = 'This game is a Tracing Shape Game where you are supposed to trace a shape with the mouse';
     info.style.left = '53vw';
 }
 

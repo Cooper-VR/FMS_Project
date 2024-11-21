@@ -11,8 +11,7 @@ let offsetX, offsetY;
 let matchMessage = "";
 
 function preload() {
-  // Load background image (uncomment if you want to use it)
-  // backgroundImg = loadImage('background.jpg'); // Replace with the path to your image
+
 }
 
 function setup() {

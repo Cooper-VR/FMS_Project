@@ -1,4 +1,4 @@
-let bgType = "gradient"; // Change this value to "image", "waves", or "particles" for different backgrounds
+let bgType = "particles"; // Change this value to "image", "waves", or "particles" for different backgrounds
 let backgroundImg;
 let particles = [];
 let waveOffset = 0;
@@ -45,7 +45,10 @@ function setup() {
 function draw() {
   // Background choice based on bgType
   if (bgType === "gradient") {
+    background(240, 248, 255);
     // Radial gradient background
+
+    //this line below makes it really slow
     setGradient(0, 0, width, height, color(135, 206, 250), color(240, 248, 255));
   } 
   else if (bgType === "image") {
@@ -113,14 +116,17 @@ function draw() {
 }
 
 function setGradient(x, y, w, h, c1, c2) {
-  noFill();
-  for (let i = 0; i <= 1; i += 0.01) {
-    let inter = map(i, 0, 1, 0, 1);
-    let c = lerpColor(c1, c2, inter);
-    stroke(c);
-    ellipse(x + w / 2, y + h / 2, w * i, h * i);
+    noFill();
+    let steps = 50; // Fewer iterations for better performance
+    for (let i = 0; i <= steps; i++) {
+      let inter = i / steps; // Map 'i' linearly between 0 and 1
+      let c = lerpColor(c1, c2, inter);
+      stroke(c);
+      let ellipseWidth = w * inter;
+      let ellipseHeight = h * inter;
+      ellipse(x + w / 2, y + h / 2, ellipseWidth, ellipseHeight);
+    }
   }
-}
 
 // Particle class for particle effect
 function Particle(x, y) {

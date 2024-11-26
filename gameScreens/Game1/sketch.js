@@ -1,4 +1,4 @@
-let bgType = "particles"; // Change this value to "image", "waves", or "particles" for different backgrounds
+let bgType = "gradient"; // Change this value to "image", "waves", or "particles" for different backgrounds
 let backgroundImg;
 let particles = [];
 let waveOffset = 0;

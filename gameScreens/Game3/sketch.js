@@ -5,7 +5,7 @@ let targetPath = [];
 let score = 0;
 
 function setup() {
-    createCanvas(600, 400);
+    createCanvas(window.innerWidth, window.innerHeight);
     defineTargetPath();
 }
 
@@ -21,6 +21,7 @@ function draw() {
         vertex(point.x, point.y);
     }
     endShape();
+    //point.x, point.y
 
     // Draw the player's path
     stroke(35, 41, 115);
@@ -59,11 +60,11 @@ function mouseDragged() {
 
 function defineTargetPath() {
     targetPath = [
-        createVector(300, 50, 200),
-        createVector(100, 200),
-        createVector(300, 350),
-        createVector(500, 200),
-        createVector(300, 50)
+        createVector(600, 50),
+        createVector(400, 200),
+        createVector(600, 350),
+        createVector(800, 200),
+        createVector(600, 50)
     ];
 }
 
